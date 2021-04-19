@@ -4,6 +4,7 @@ import com.cvieira.libraryapi.dto.BookDTO;
 import com.cvieira.libraryapi.exception.BusinessException;
 import com.cvieira.libraryapi.model.entity.Book;
 import com.cvieira.libraryapi.service.BookService;
+import com.cvieira.libraryapi.service.LoanService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
@@ -41,6 +42,9 @@ public class BookControllerTest {
 
     @MockBean
     BookService bookService;
+
+    @MockBean
+    LoanService loanService;
 
     private static String BOOK_API = "/api/books";
 
